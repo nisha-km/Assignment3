@@ -1,18 +1,15 @@
-package assignment3;
+package aggregationandEncapsulation;
+
 
 public class Customer {
-
 	private String name;
-	private Address address;
-
-	public Customer() {
-		
-	}
-
-	public Customer(String name, Address address) {
-		super();
+	private Address residentialAddress;
+	private Address officialAddress;
+	
+	public Customer(String name, Address residentialAddress, Address officialAddress) {
 		this.name = name;
-		this.address = address;
+		this.residentialAddress = residentialAddress;
+		this.officialAddress = officialAddress;
 	}
 
 	public String getName() {
@@ -23,16 +20,26 @@ public class Customer {
 		this.name = name;
 	}
 
-	public Address getAddress() {
-		return address;
+	public Address getResidentialAddress() {
+		return residentialAddress;
 	}
 
-	public void setAddress(Address address) {
-		this.address = address;
+	public void setResidentialAddress(Address residentialAddress) {
+		this.residentialAddress = residentialAddress;
+	}
+
+	public Address getOfficialAddress() {
+		return officialAddress;
+	}
+
+	public void setOfficialAddress(Address officialAddress) {
+		this.officialAddress = officialAddress;
 	}
 	
+
 	public void getCustomerDetails() {
 		System.out.println("Customer :"+name);
-		System.out.println("Residential Address :"+address.getAddessLine()+" " +address.getCity());
+		System.out.println("Residential Address :"+residentialAddress.getAddessLine() +" "+residentialAddress.getCity());
+		System.out.println("Official Address :"+officialAddress.getAddessLine() +" "+officialAddress.getCity());
 	}
 }

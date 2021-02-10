@@ -1,16 +1,21 @@
-package assignment3;
+package aggregationandEncapsulation;
 
 public class Address {
 	private String addessLine;
 	private String city;
-	
-	
+
+
 
 	public Address(String addessLine, String city) {
 		super();
 		this.addessLine = addessLine;
 		this.city = city;
+
+
+
 	}
+
+
 
 	public String getAddessLine() {
 		return addessLine;
@@ -33,6 +38,8 @@ public class Address {
 	public void setCity(String city) {
 		this.city = city;
 	}
+
+
 
 
 }
